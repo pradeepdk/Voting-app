@@ -147,4 +147,7 @@ select.pollingSelection {
         border-top: 1px solid #d1d3d4;
         padding: 30px 0 0;
     }
+    .pollingresultDiv {
+        margin: 20px 0 0;
+    }
 }
