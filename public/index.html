@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Voting App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="CSS/reset.css" rel="stylesheet"></link>
+    <link href="CSS/style.css" rel="stylesheet"></link>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <div class="logoDiv">
+                <p class="logoText">Voting App</p>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="homePage">
+                <div class="createPollDiv">
+                    <p class="createPollHeader">Make a new poll</p>
+                    <div class="makePollBody">
+
+                        <div class="formControl">
+                            <label class="">TITLE : </label>
+                            <input id="titleInput" type="text" class="formInput" />
+                        </div>
+                        <div class="formControl">
+                            <p class="formLabel">OPTIONS : ( *Seperated by lines ) </p>
+                            <textarea id="optionsTextarea" class="formTextArea"></textarea>
+                        </div>
+                        <div class="buttonWrapper">
+                            <button id="createPollButton" class="createPollButton">Create</button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="pollListDiv">
+                    <p class="createPollHeader">Poll List</p> <span id="refreshTable" class="refreshPoll">Refresh</span>
+                    <div class="makePollBody">
+                        <table class="pollListTable">
+                            <thead>
+                                <tr>
+                                    <th class="titleCell">Poll title</th>
+                                    <th class="viewCell"> View </th>
+                                    <th class="removeCell"> Remove </th>
+                                </tr>
+                            </thead>
+                            <tbody id="pollListBody">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="pollingDivWrapper" class="pollingPage">
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script id="template_pollList" type="x-tmpl-mustache">
+        {{#list}}
+        <tr data-id={{_id}}>
+            <td class="titleCell">{{title}}</td>
+            <td class="viewCell js-viewCell"> <span class="viewText"> Vote/Result </span></td>
+            <td class="removeCell js-removeCell"> <span class="removeText">X </span></td>
+        </tr>
+        {{/list}}
+    </script>
+
+    <script id="template_pollingDiv" type="x-tmpl-mustache">
+        <div class="poliingPageWrapper">
+            <div class="backButton">Back</div>
+            <div class="pollingDiv">
+                <p class="pollingTitle">{{title}}</p>
+                <p class="pollingText">I would like to vote for : </p>
+                <div class="voteSectionDiv">
+                    <select class="pollingSelection">
+            {{#contestants}}
+                <option value={{name}} >{{name}}</option>
+            {{/contestants}}
+        </select>
+                </div>
+                <div class="voteButtonWrapperDiv">
+                    <button data-id={{_id}} class="createPollButton js-voteButton">Submit</button>
+                </div>
+            </div>
+            <div class="pollingresultDiv">
+                <canvas id="resultChart" class="resultChart" width="300" height="300"></canvas>
+            </div>
+        </div>
+    </script>
+
+    <script src="JS/external/jquery.js"></script>
+    <script src="JS/external/Chart.min.js"></script>
+    <script src="JS/external/moustache.min.js"></script>
+    <script src="JS/main.js"></script>
+</body>
+
+</html>

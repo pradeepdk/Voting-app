@@ -1,0 +1,149 @@
+.header {
+    padding: 20px 8%;
+    box-shadow: 0 0 4px 1px #d1d3d4;
+    color: #813589;
+    font-size: 30px;
+}
+.wrapper {
+    padding: 40px 8% 20px;
+    overflow: hidden;
+}
+.makePollBody {
+    margin: 10px 0 0 0;
+    width: 100%;
+    float: left;
+}
+.createPollHeader {
+    font-size: 20px;
+    float: left;
+}
+.refreshPoll {
+    float: right;
+}
+.createPollDiv {
+    width: 360px;
+    float: left;
+    margin: 0 35px 0 0;
+    border-right: 1px solid #d1d3d4;
+}
+.formControl {
+    margin: 20px 0;
+}
+.formInput {
+    border: 1px solid #d1d3d4;
+    padding: 5px 10px;
+    width: 250px;
+    border-radius: 4px;
+}
+.formTextArea {
+    border: 1px solid #d1d3d4;
+    border-radius: 5px;
+    width: 300px;
+    height: 80px;
+    margin: 10px 0 0;
+    padding: 10px;
+}
+
+.createPollButton {
+    border: none;
+    width: 200px;
+    padding: 8px 10px;
+    cursor: pointer;
+    background: #FF7F2A;
+    color: #fff;
+    border-radius: 3px;
+}
+.createPollButton:hover {
+    background: #EE5E2A
+}
+.pollListDiv {
+    width: calc(100% - 400px);
+    float: left;
+}
+.pollListTable {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin: 20px 0 0;
+}
+.pollListTable th {
+    font-weight: bold;
+}
+.pollListTable th ,.pollListTable td {
+    padding: 15px 8px;
+    border-right: 1px solid #d1d3d4;
+    
+}
+.pollListTable th:last-child ,.pollListTable td:last-child {
+    border-right:none;
+}
+
+.viewText:hover , .refreshPoll:hover , .backButton:hover{
+    color: #222;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.removeText:hover {
+    color: #222;
+    cursor: pointer;
+}
+.titleCell {
+    width: 60%;
+}
+.viewCell, .removeCell  {
+    width: 20%;
+    text-align: center;
+}
+.pollListTable tr {
+    border-bottom: 1px solid #d1d3d4;
+}
+.pollListTable tbody tr:last-child{
+    border-bottom: none;
+}
+.pollingPage {
+    display: none;
+}
+
+.pollingTitle {
+    font-size: 20px;
+    margin: 20px 0;
+}
+.pollingDiv, .pollingresultDiv {
+    width: 50%;
+    float: left;
+}
+.resultChart {
+    border:1px solid#000;
+}
+p.pollingText {
+    font-size: 16px;
+    margin: 0 0 20px 0;
+}
+.pollingresultDiv {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+select.pollingSelection {
+    border: 1px solid #d1d3d4;
+    border-radius: 3px;
+    width: 200px;
+    margin: 0 0 15px;
+    padding: 5px 6px;
+}
+/* Responsive mode */
+
+@media screen and (max-width:1000px) {
+    .createPollDiv {
+        border-right: none;
+        padding: 0 0 30px 0;
+        float: none;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+    .pollListDiv {
+        width: 100%;
+        border-top: 1px solid #d1d3d4;
+        padding: 30px 0 0;
+    }
+}
