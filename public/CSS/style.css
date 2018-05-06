@@ -72,6 +72,7 @@
 .pollListTable th ,.pollListTable td {
     padding: 15px 8px;
     border-right: 1px solid #d1d3d4;
+    word-wrap: break-word;
     
 }
 .pollListTable th:last-child ,.pollListTable td:last-child {
